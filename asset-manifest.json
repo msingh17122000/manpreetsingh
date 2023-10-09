@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/manpreetsingh/static/css/main.45a4c4b4.css",
+    "main.js": "/manpreetsingh/static/js/main.de0f8313.js",
+    "static/media/IMG_1306.jpg": "/manpreetsingh/static/media/IMG_1306.64f8a8d6dacec779dc51.jpg",
+    "static/media/SFNSDisplay-Bold.otf": "/manpreetsingh/static/media/SFNSDisplay-Bold.83157629472ee51cdaa4.otf",
+    "static/media/SFNSDisplay-Light.otf": "/manpreetsingh/static/media/SFNSDisplay-Light.2735892336f0546c4964.otf",
+    "static/media/myproject03.png": "/manpreetsingh/static/media/myproject03.85c778ac9e0cdc14163f.png",
+    "static/media/SFNSDisplay-Regular.otf": "/manpreetsingh/static/media/SFNSDisplay-Regular.8e4b2b7a0e945fc44e70.otf",
+    "static/media/myproject01thumbnail.png": "/manpreetsingh/static/media/myproject01thumbnail.7b6ad4618916fcef59f8.png",
+    "static/media/myproject02.png": "/manpreetsingh/static/media/myproject02.9ab886606475afb17932.png",
+    "static/media/react-logo.svg": "/manpreetsingh/static/media/react-logo.598d90dd4f36234e376cbc6ccd571550.svg",
+    "static/media/mysql-logo.svg": "/manpreetsingh/static/media/mysql-logo.8f2485ce1763b44c7edda6323651e741.svg",
+    "static/media/snapchat-logo-7106.svg": "/manpreetsingh/static/media/snapchat-logo-7106.fe76a56dbd4168432381fb7eb4d8dfa5.svg",
+    "static/media/network-backup-svgrepo-com.svg": "/manpreetsingh/static/media/network-backup-svgrepo-com.9434b28758e1bae17ed012ff6970a884.svg",
+    "static/media/php-logo.svg": "/manpreetsingh/static/media/php-logo.099cd051f27e93830fcdb7b1ac05bc40.svg",
+    "static/media/default-cursor.svg": "/manpreetsingh/static/media/default-cursor.4ca5972581493dc27f48.svg",
+    "static/media/cursor-pointer.svg": "/manpreetsingh/static/media/cursor-pointer.6bf870b57ba2f6c08def.svg",
+    "static/media/flutter-logo.svg": "/manpreetsingh/static/media/flutter-logo.5e0ebde82050c8fcdf6121b4498b520c.svg",
+    "static/media/twitter-x-logo-black-square-rounded-20852.svg": "/manpreetsingh/static/media/twitter-x-logo-black-square-rounded-20852.7825eae633c8842ff1e11ba6b5e3975b.svg",
+    "static/media/project-icon.svg": "/manpreetsingh/static/media/project-icon.4c3751395b4bb97912020f3d7f55510f.svg",
+    "static/media/contact-icon.svg": "/manpreetsingh/static/media/contact-icon.d48b24d208762a915c1670bcc0b97ff2.svg",
+    "static/media/iconmonstr-github-3.svg": "/manpreetsingh/static/media/iconmonstr-github-3.197212f02efa31cf1fd6ce8f39191593.svg",
+    "static/media/linkedin-rounded-svgrepo-com.svg": "/manpreetsingh/static/media/linkedin-rounded-svgrepo-com.a7455a3a96a01aa50c5680f8c935ad40.svg",
+    "index.html": "/manpreetsingh/index.html",
+    "static/media/instagram-svgrepo-com.svg": "/manpreetsingh/static/media/instagram-svgrepo-com.01a03ab78f634d30e6ee24909a7e50aa.svg",
+    "static/media/home-5-svgrepo-com.svg": "/manpreetsingh/static/media/home-5-svgrepo-com.2e66e45358d25939798a23aedf33b341.svg",
+    "static/media/user.svg": "/manpreetsingh/static/media/user.9d40b04f677723ba233430069b023cea.svg",
+    "static/media/js-logo.svg": "/manpreetsingh/static/media/js-logo.7bb08cdbe94fc2dfc1b51be8c2dae551.svg",
+    "static/media/ms-logo.svg": "/manpreetsingh/static/media/ms-logo.d50c52eddaa88aef021192d9665790c3.svg",
+    "static/media/css-logo.svg": "/manpreetsingh/static/media/css-logo.315b8fdb9dbf75ae965b80bf368895cd.svg",
+    "static/media/html-logo.svg": "/manpreetsingh/static/media/html-logo.0107c93943a8f415b5db64ebb0a9d12d.svg",
+    "main.45a4c4b4.css.map": "/manpreetsingh/static/css/main.45a4c4b4.css.map",
+    "main.de0f8313.js.map": "/manpreetsingh/static/js/main.de0f8313.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45a4c4b4.css",
+    "static/js/main.de0f8313.js"
+  ]
+}
