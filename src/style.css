@@ -1,0 +1,38 @@
+*{
+    cursor: url('./assets/svg/default-cursor.svg'),auto;
+}
+
+body{
+    background-color: #eff1f4;
+}
+
+::-webkit-scrollbar {
+    display: none
+  }
+  
+  ::-webkit-scrollbar-track {
+    /* background-color: #eff1f4; */
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #272727;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+  }
+
+.main{
+    overflow-x: hidden;
+    transition: 0.8s ease;
+}
+:root{
+  --primary-color:#1040e2;
+  --purple-color:#555a8f;
+  --secondary-black:rgb(45, 45, 45);
+  --light-black:rgb(76, 76, 76);
+}

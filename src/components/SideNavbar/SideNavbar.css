@@ -1,0 +1,120 @@
+
+.SideNavbar-Container {
+    position: fixed;
+    height: 100vh;
+    width: 70px;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    transition: 0.4s ease;
+    z-index: 100;
+}
+.SideNavbar-Container:hover{
+    width: 200px;
+    transition: 0.3s ease;
+}
+
+.portfolio-logo{
+position: absolute;
+top:10px;
+left: 15px;
+cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
+
+}
+.portfolio-logo img{
+    height: 40px ;
+    width: 40px;
+    filter: invert(1);
+    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
+    
+}
+.portfolio-logo:hover img{
+    filter: drop-shadow(black 0px 7px 29px 0px);
+}
+/* .SideNavbar-Container:hover +.main-content{
+    margin-left:200px !important;
+    transition: 0.5s ease;
+} */
+
+.SideNavbar-Container:hover .Sidebar-buttons-label{
+    display: block;
+    animation: slideRight 0.3s ; 
+}
+
+.SideNavbar-buttons {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
+}
+
+.SideNavbar-buttons:hover{
+    transition: 0.3s ease-in-out;
+    background-color: var(--primary-color);
+    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
+    
+}
+.pink:hover{
+    transition: 0.3s ease-in-out;
+    background-color: #b64565;
+}
+
+.SideNavbar-buttons img {
+    filter: invert(1);
+    height: 30px;
+    width: 30px;
+    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
+}
+
+.Sidebar-buttons-label {
+    display: none;
+    color: white;
+    margin-left:20px ;
+    width: 90px;
+    font-size: 18px;
+    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
+}
+
+@keyframes fadeIn {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes slideRight {
+    0%{margin-left: -100px;}
+    100%{margin-left: 20px;}
+}
+@keyframes fadeOut {
+    0%{opacity: 1;}
+    100%{opacity: 0;}   
+}
+
+
+@media only screen and (min-width: 700px) {
+    .main-content{
+        margin-left: 60px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .SideNavbar-Container {
+        display: none;
+    }
+    .ham-menu{
+        display: block !important;
+    }
+    .main-container{
+        padding: 0px 20px 0px 20px !important;
+        /* padding:0px; */
+    }
+  }
+
+
+

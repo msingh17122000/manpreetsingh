@@ -1,0 +1,70 @@
+.MySkills-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.my-skills-heading{
+    transition: 0.6s ease;
+    padding: 10px;
+    color: var(--secondary-black);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sanf-bold;
+}
+.skills-container{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content:center ;
+}
+.skills-box{
+    height: 150px;
+    width:150px;
+    border-radius: 10px;
+    transition: 0.6s ease;
+    background-color: #161616;
+    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.skills-box:hover{
+    transition: 0.6s ease;
+    box-shadow: var(--primary-color )  0px 0px 19px 0px;
+    background-color: var(--primary-color);
+}
+.skill-box-image img{
+    height: 70px;
+    width: 70px;
+    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
+}
+.skill-box-heading{
+    font-size: 20px;
+    padding-top: 10px;
+    font-family: sanf;
+    color: white;
+    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
+}
+#mysql-img{
+    filter: invert(1);
+}
+
+@media only screen and (max-width: 480px) {
+    .skill-box-image img{
+        height: 50px;
+        width: 50px;
+    }
+    .skills-box{
+        height: 100px;
+        width: 100px;
+    }
+    .skill-box-heading{
+        font-size: 12px;
+    }
+}

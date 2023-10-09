@@ -1,0 +1,126 @@
+/* Contact Page CSS */
+#contact-me-text{
+    margin-top:20px ;
+    text-wrap:wrap;
+    color: var(--light-black);
+}
+.send-mail-link{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    font-family: sanf-bold;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    padding:12px ;
+    border-radius: 5px;
+    transition: 0.6s ease;
+    font-size: 20px;
+}
+.send-mail-link:hover{
+    background-color: #1040e2;
+    cursor: url('../assets/svg/cursor-pointer.svg'),pointer;
+
+}
+.social-links-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.social-links img{
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+}
+.social-links:hover img{
+    cursor: url('../assets/svg/cursor-pointer.svg'),pointer;
+    filter: invert(18%) sepia(89%) saturate(3639%) hue-rotate(226deg) brightness(90%) contrast(98%);}
+.contact{
+    animation: fadeIn 1s ease;
+}
+.margin-left{
+    margin-left: 70px;
+}
+.no-padding{
+    padding:0px !important;
+}
+/* About me Page CSS */
+.about-me-page{
+    animation: fadeIn 2s ease;
+}
+.aboutme-page-container{
+    /* padding-top: 100px;
+    padding-bottom: 100px; */
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.left-side-pic img{
+ max-height: 500px;
+    min-width: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;
+}
+.no-bottom-padding{
+padding-bottom: 0px;
+}
+.flex-row{
+    flex-direction: column;
+}
+@media only screen and (max-width: 900px) {
+    .aboutme-page-container{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .aboutme-page-container{
+        margin: 0;
+    }
+}
+
+.medium-heading{
+    font-size: 20px;
+    font-family: sanf-bold;
+    color: var(--secondary-black);
+}
+.bold-text{
+    font-family: sanf-bold;
+    color: black;
+}
+.about-me-text{
+    padding-top: 10px;
+    font-family: sanf-light;
+    font-size: 18px;
+    color: var(--light-black);
+}
+.center{
+    text-align: center;
+}
+.center div{
+    justify-content: center;
+}
+
+/* for blur load image */
+.blur-load{
+   background-image: url("../assets/images/blur-load.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   border-radius: 10px;
+ 
+}
+.blur-load.loaded > img{
+    opacity: 1;
+}
+.blur-load > img{
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}

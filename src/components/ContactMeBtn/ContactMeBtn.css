@@ -1,0 +1,19 @@
+.ContactMe-btn{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    font-family: sanf-bold;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    padding:12px ;
+    border-radius: 5px;
+    transition: 0.6s ease;
+    font-size: 20px;
+}
+.ContactMe-btn:hover{
+    background-color: #1040e2;
+    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
+}
