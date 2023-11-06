@@ -30,12 +30,14 @@ function AboutSection() {
             <br/>
             <br/>
             </div>
+            <div className='about-section'>
             <div className='small-heading'id='about-me-heading'>About me </div>
             <br/>
             <div className='med-text'id='about-text'>
             I'm a passionate web developer with a flair for front-end design and a deep commitment to creating captivating user experiences. My journey into the world of web development started with a fascination for turning creative concepts into functional, user-friendly websites and applications.
             <br/><br/>
             I'm always eager to take on new challenges and stay up-to-date with the latest trends and technologies in the ever-evolving tech landscape. Problem-solving and attention to detail are my strengths, and I'm committed to delivering projects that exceed expectations.
+            </div>
             <br/><br/>
             <Link to="/about-me"className='read-more'> Read more {'>'} </Link>
 

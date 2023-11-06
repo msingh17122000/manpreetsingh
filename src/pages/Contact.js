@@ -6,13 +6,14 @@ import SocialLinks from '../components/SocialLinks/SocialLinks'
 
 function Contact() {
   return (
+    <div className='main-content'>
     <div className='aboutme-page-container flex-row '>
       <br/>
       <br/>
       <br/>
       <br/>
-    <div className='main-content'>
-    <div className='main-container no-padding'>
+    
+    <div className='main-container '>
         
         <div className='main-heading'>Contact me</div>
         <div className='med-text'id='contact-me-text'>

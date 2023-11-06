@@ -1,0 +1,121 @@
+.AboutPortfolioContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #F5F5F7;
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.6s ease;
+}
+.AboutPortfolioSectionLeft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AboutPortfolioSectionLeft img{
+    height: 600px;
+    animation: fadeIn 1s ease;
+}
+.light-darkDotsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #50B077;
+    padding: 10px;
+    border-radius: 50px;
+}
+.darkModeCircle{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(41, 41, 41);
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+.darkModeCircle:hover{
+    background-color:rgb(0, 0, 0);
+}
+.lightModeCircle{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(215, 215, 215);
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+.lightModeCircle:hover{
+    background-color:rgb(255, 255, 255);
+}
+.AboutPortfolioSectionRight {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+}
+.portfolioHeading{
+    font-size: 60px;
+    font-family: sanf-bold;
+    color: black;
+    transition: 0.6s ease;
+}
+.portfolioText{
+    font-size: 30px;
+    font-family: sanf-bold;
+    color: rgb(31, 31, 31);
+    transition: 0.6s ease;
+}
+.githubLink{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.githubLink a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    font-family: sanf-bold;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.6s ease;
+}
+.githubLink img{
+    height: 40px;
+    transition: 0.6s ease;
+}
+@media only screen and (max-width: 950px) {
+    .AboutPortfolioContainer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+    }
+    .AboutPortfolioSectionLeft img{
+        height: 300px;
+        filter: drop-shadow(-20px 20px 10px #0000005d);
+    }
+    .AboutPortfolioSectionLeft{
+        display: flex;
+        flex-direction: column;
+    }
+    .portfolioHeading{
+        padding-top: 20px;
+        font-size: 35px;
+        text-align: left;
+    }
+    .portfolioText{
+        padding-top: 10px;
+        font-size: 20px;
+        text-align: left;
+        padding-bottom: 10px;
+    }
+    .githubLink{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .light-darkDotsContainer{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 40px;
+        order: 2;
+    }
+}

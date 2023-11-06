@@ -10,21 +10,61 @@
   font-family:Sanf-bold ;
   src: url(./fonts/sanf//SFNSDisplay-Bold.otf);
 }
+@font-face {
+  font-family: r-bold;
+  src: url(./fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: r-medium;
+  src: url(./fonts/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: r-light;
+  src: url(./fonts/Roboto/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: r-regular;
+  src: url(./fonts/Roboto/Roboto-Regular.ttf);
+}
 *{
   padding: 0px;
   margin: 0px;
   scroll-behavior: smooth;
 }
 html, body{
-  overflow-x: hidden;
+  /* overflow-x:hidden; */
 }
 body {
   font-family:Sanf ;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   overscroll-behavior: none;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+a:focus, img:focus {
+  outline: none !important;
+}
+a, img {
+  outline: none !important;
+}
+a:focus,a:visited,a:active{
+  outline: none !important;
+}
+div,
+select,
+img,
+a {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+::-moz-selection { /* Code for Firefox */
+  background: #50B077;
+}
+
+::selection {
+  color: white;
+  background: #50B077;
 }

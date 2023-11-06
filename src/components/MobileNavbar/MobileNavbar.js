@@ -1,92 +1,73 @@
 import React from 'react'
-import {useEffect,useState} from "react"
+import { useEffect, useState } from "react"
 import "./MobileNavbar.css"
-
-import HomeIcon from '../../assets/svg/home-5-svgrepo-com.svg'
-import WorkIcon from "../../assets/svg/project-icon.svg"
-import SocialIcon from "../../assets/svg/network-backup-svgrepo-com.svg"
-import ContactIcon from "../../assets/svg/contact-icon.svg"
-import UserIcon from '../../assets/svg/user.svg'
-import { Link } from 'react-router-dom'
-
-
+import upArrow from "../../assets/svg/up-arrow.svg"
+import NavbarLogo from '../../assets/svg/ms-logo.svg'
+import { Link, NavLink } from 'react-router-dom'
+import LightDarkButton from '../LightDarkButton/LightDarkButton'
 function MobileNavbar() {
-
-
-    const [isVisible, setIsVisible] = useState(false); // Initial visibility state
-
-    const showMenu = () => {
-    //     setTimeout(()=>{
-    //         document.getElementById('projects-btn').addEventListener('click',()=>{
-    //          console.log(!isVisible);
-    //              setIsVisible(false)
-    //              showMenu();
-    //          });
-    //              }, 800);
-    // console.log(isVisible);
-      
-      setIsVisible(!isVisible); //sets the value true
-      console.log(isVisible);
-      if(!isVisible)//if its not visible then show menu
-      {
-      document.getElementById("ham-menu").style.transform = "rotate(90deg)";
-      document.getElementById("top-line").style.transform = "rotate(45deg)";
-      document.getElementById("bottom-line").style.transform = "rotate(-45deg)";
-      document.getElementById("middle-line").style.display = "none";
-      document.getElementById("top-line").style.position = "absolute";
-      document.getElementById("bottom-line").style.position = "absolute";
-      setTimeout(()=>{
-      document.getElementById('slide-anim').style.transform='scale(200)';
-        }, 100);
-      document.getElementById('slide-anim').style.display='block';
-
- 
-
-
+  const [isVisible, setIsVisible] = useState(false); // Initial visibility state
+  const showMenu = () => {
+    setIsVisible(!isVisible); //sets the value true
+    if (!isVisible)//if its not visible then show menu
+    {
+      openMenu();
     }
-      else{ //else hide menu
-        
-        document.getElementById("top-line").style.transform = "rotate(0deg)";
-        document.getElementById("bottom-line").style.transform = "rotate(0deg)";
-        document.getElementById('slide-anim').style.transform='scale(0)';
-        document.getElementById("ham-menu").style.transform = "rotate(0deg)";
-        setTimeout(()=>{
-            document.getElementById("middle-line").style.display = "block";
-            document.getElementById("top-line").style.position = "relative";
-            document.getElementById("bottom-line").style.position = "relative";
-           
-        }, 200);
+    else { //else hide menu
+      closeMenu();
+    }
+  };
 
+  function closeMenu(){
+    document.getElementById("LineOne").style.transform = "rotate(0deg)";
+    document.getElementById("LineTwo").style.transform = "rotate(0deg)";
+    setTimeout(() => {
+      document.getElementById("LineOne").style.position = "relative";
+      document.getElementById("LineTwo").style.position = "relative";
 
-      }
- 
-    
-      
-    };
-
+    }, 200);
+    document.getElementById('MobileNavbarContainer').style.height = '45px';
+    document.getElementById('SideNavbar-mobile').style.transform = 'translateY(-800px)';
+    document.body.style.overflow='auto';
+  }
+ function openMenu(){
+  document.getElementById("LineOne").style.transform = "rotate(45deg)";
+  document.getElementById("LineTwo").style.transform = "rotate(-45deg)";
+  document.getElementById("LineOne").style.position = "absolute";
+  document.getElementById("LineTwo").style.position = "absolute";
+  document.getElementById('MobileNavbarContainer').style.height = '100vh';
+  document.getElementById('SideNavbar-mobile').style.transform = 'translateY(0px)';
+  document.body.style.overflow='hidden';
+ }
 
 
   return (
-    <div>
-        <div className='ham-menu'onClick={showMenu}id='ham-menu'>
-            <div className='ham-menu-lines-container'>
-                <div className='ham-menu-slide-animation'id='slide-anim'></div>
-                <div className='ham-menu-lines' id='top-line'></div>
-                <div className='ham-menu-lines'id='middle-line'></div>
-                <div className='ham-menu-lines'id='bottom-line'></div>
+    <div className='MobileNavigationBar'>
+      <div className='MobileNavbarContainer' id="MobileNavbarContainer">
+        <div className='MobileNavbarSectionTop'>
+          <div className='MobileNavbarLogo'><Link to='/'><img src={NavbarLogo} className='MobileNavbarLogoImage' id='MobileNavbarLogoImage' alt='Manpreet Singh Logo' /></Link></div>
+          <div className='MobileNavbarHameMenuContainer'>
+            <div className='MobileNavbarHamMenu' onClick={showMenu}>
+              <div className='HamMenuLine' id='LineOne'></div>
+              <div className='HamMenuLine' id='LineTwo'></div>
+            </div>
+          </div>
+        </div>
+        <div className='SectionExpand'id='SectionExpand'>
+          <div className='SideNavbar-small' id='SideNavbar-mobile'>
+            <NavLink to="/" className='sidenav-links'onClick={closeMenu}><div className='SideNavbar-buttons'><div className='Sidebar-buttons-label show'>Home</div></div></NavLink>
+            <NavLink to="/about-me" className='sidenav-links'onClick={closeMenu}><div className='SideNavbar-buttons pink'><div className='Sidebar-buttons-label show'>About me</div></div></NavLink>
+            <NavLink to="/my-projects" id='projects-btn' className='sidenav-links'onClick={closeMenu}><div className='SideNavbar-buttons pink'><div className='Sidebar-buttons-label show'>Projects</div></div></NavLink>
+            <a href='https://drive.google.com/file/d/1wQMHOxo5UHAYS22ZsB1v7Js2-913VSD3/view?usp=drive_link' target="_blank" className='sidenav-links'onClick={closeMenu}><div className='SideNavbar-buttons'><div className='Sidebar-buttons-label show'>Resume</div></div></a>
+            <NavLink to="/contact" className='sidenav-links'><div className='SideNavbar-buttons'><div className='Sidebar-buttons-label show'onClick={closeMenu}>Contact</div></div></NavLink>
+            <div className='ThemeButtonContainer'>
+              <div className='ThemeButton'>
+                <LightDarkButton />
+              </div>
+            </div>
             </div>
         </div>
-        {isVisible && 
-        <div className='SideNavbar-small'id='SideNavbar-mobile'>
-            <Link to="/"className='sidenav-links'><div className='SideNavbar-buttons'><img src={HomeIcon} alt='Home'/><div className='Sidebar-buttons-label show'>Home</div></div></Link>
-            <Link to="/about-me"className='sidenav-links'><div className='SideNavbar-buttons'><img src={UserIcon} alt='About me'/><div className='Sidebar-buttons-label show'>About me</div></div></Link>
-            <Link to="/"id='projects-btn'className='sidenav-links'><div className='SideNavbar-buttons pink'><img src={WorkIcon} alt='Projects'/><div className='Sidebar-buttons-label show'>Projects</div></div></Link>
-            <Link to="/contact"className='sidenav-links'><div className='SideNavbar-buttons pink'><img src={ContactIcon} alt='Home'/><div className='Sidebar-buttons-label show'>Contact</div></div></Link>
-            <Link to="/contact"className='sidenav-links'><div className='SideNavbar-buttons'><img src={SocialIcon} alt='Connect'/><div className='Sidebar-buttons-label show'>Connect</div></div></Link>
-            
-    
-        </div>
-        }
+      </div>
     </div>
   )
 }

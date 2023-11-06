@@ -1,14 +1,13 @@
 .MySkills-Container{
     display: flex;
+    width: 100%;
+    min-height: 400px;
     flex-direction: column;
     justify-content: center;
-
+    position: relative;
 }
-
 .my-skills-heading{
-    transition: 0.6s ease;
     padding: 10px;
-    color: var(--secondary-black);
     font-size: 30px;
     display: flex;
     justify-content: center;
@@ -16,55 +15,79 @@
     font-family: sanf-bold;
 }
 .skills-container{
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
     gap:20px;
-    justify-content:center ;
+    position: relative;
+    height: 100%;
+    margin-left: 20px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+		display: none;
+	}
+    
 }
 .skills-box{
-    height: 150px;
-    width:150px;
-    border-radius: 10px;
-    transition: 0.6s ease;
-    background-color: #161616;
-    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
+    position: relative;
+    border-radius: 6px;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 20px;
+    flex: 1 0 160px;
+    width: 180px;
+    scroll-snap-align: start;
+    
 }
-.skills-box:hover{
-    transition: 0.6s ease;
-    box-shadow: var(--primary-color )  0px 0px 19px 0px;
-    background-color: var(--primary-color);
+.html-skill{
+    background-color:#f9c1a9;
+}
+.css-skill{
+    background-color:#adddf1;
+}
+.js-skill{
+    background-color: #fcf2a5;
+}
+.react-skill{
+    background-color:#99efff;
+}
+.figma-skill{
+    background-color: #9deccd; 
+}
+.flutter-skill{
+    background-color: #b5e8fd; 
+}
+.php-skill{
+    background-color: #cfd3e5;
+}
+.mysql-skill{
+    background-color: #afbec6;
 }
 .skill-box-image img{
-    height: 70px;
-    width: 70px;
-    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
 }
 .skill-box-heading{
-    font-size: 20px;
+    font-size: 22px;
     padding-top: 10px;
-    font-family: sanf;
-    color: white;
-    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
+    font-family: sanf-bold;
+    cursor: pointer;
+    color: black;
 }
-#mysql-img{
-    filter: invert(1);
+.skill-box-text{
+    font-family: r-regular;
+    font-size: 16px;
+    text-align: left;
+    color:black;
 }
 
+
 @media only screen and (max-width: 480px) {
-    .skill-box-image img{
-        height: 50px;
-        width: 50px;
-    }
-    .skills-box{
-        height: 100px;
-        width: 100px;
-    }
     .skill-box-heading{
-        font-size: 12px;
+        font-size: 22px;
     }
 }

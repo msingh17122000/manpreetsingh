@@ -1,0 +1,22 @@
+.ToggleButtonContainer{
+    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
+}
+.ToggleButtonBackground{
+    width: 40px;
+    height: 20px;
+    background-color: #FFFDC3;
+    border-radius: 40px;
+    position: relative;
+    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
+    transition: 0.4s ease;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.ToggleCircle{
+    background-color:  #FFE72B;
+    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.4s ease;
+}

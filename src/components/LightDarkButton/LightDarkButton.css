@@ -1,0 +1,36 @@
+.SwitchThemeButton{
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+.SwitchThemeButton img{
+    filter: invert(94%) sepia(96%) saturate(586%) hue-rotate(65deg) brightness(93%) contrast(85%);width: 30px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.Dark{
+    background-color: black !important;
+    color: white;
+    transition: 0.4s ease;
+}
+.Dark-Nav{
+    /* background-color: rgba(30, 30, 30, 0.6) !important; */
+    background-color: rgba(22, 22, 23, .7) !important;
+    color: white;
+}
+.Dark-MobileNav{
+    background-color: rgb(20, 20, 20) !important;
+    color: white;  
+}
+
+@media only screen and (max-width: 700px) {
+    .SwitchThemeButton img{
+        height: 40px;
+        width: 40px;
+    }
+}

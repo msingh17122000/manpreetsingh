@@ -1,77 +1,169 @@
-
-.SideNavbar-small{
-    margin-top: 50%;
-    width: 100%;
-    position: fixed;
-    top:0;
-    z-index: 100;
+.MobileNavigationBar{
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
-    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
-    animation: fadeIn 3s ;
-  }
-
-.ham-menu{
-    position: fixed;
-    height: 50px;
-    width: 50px;
-    top:0;
-    left: 0;
-    display: none;
-    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
-    z-index: 100;
-    background-color: rgb(20, 20, 20);
-    border-radius: 50%;
-    margin: 10px;
-    /* box-shadow: rgb(255 255 255) 0px 0px 2px 0px; */
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 30px 0px;
-    transition: 0.8s ease;
+    
 }
-
-.ham-menu-lines-container{
+.MobileNavbarContainer{
+    display: none;
+    height: 45px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(60px);
+    z-index: 100;
+    position: fixed;
+    transition: 0.4s ease;
+}
+.MobileNavbarSectionTop{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.MobileNavbarLogo{
     display: flex;
+    justify-content: flex-start;
+}
+.MobileNavbarLogoImage{
+    height: 28px;
+    width: 28px;
+    cursor: pointer;
+}
+.MobileNavbarHameMenuContainer{
     height: 100%;
-    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.MobileNavbarHamMenu{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 50px;
+    cursor: pointer; 
+}
+.HamMenuLine{
+    height: 2px;
+    width: 24px;
+    background-color: black;
+    border-radius: 40px;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+.NavMenuContainer{
+    width: 40px;
+    height: 100%;
+    padding-right: 20px;
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap:6px;
     justify-content: center;
     align-items: center;
-    gap: 6px;
-    flex-direction: column;
-    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
-}
-.ham-menu-lines{
-    display: flex;
-    background-color: white;
-    height: 3px;
-    width: 30px;
-    border-radius: 20px;
-    transition: 0.8s ease;
-    position: relative;
-    animation: fadeIn 0.4s ease;
-    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
-    z-index: 99;
-}
-.show{
-    display: block !important;
-    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
-   
-}
-.ham-menu-slide-animation{
-    background-color: rgb(20, 20, 20);
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    transition: 0.8s ease;
-    border-radius: 50%;
-    z-index: 0;
-    cursor: url('../../assets/svg/cursor-pointer.svg'),pointer;
-    display: none;
+    cursor: pointer;
     
 }
 
+@media only screen and (max-width: 700px) {
+.MobileNavbarContainer{
+    display: grid;
+    grid-template-rows: 45px 1fr;
+    align-items: center;
+}
+}
+@media only screen and (min-width:700px){
+    .SideNavbar-small{
+        display: none;
+    }
+}
+.NavMenuExpand{
+    height: 500px;
+    transition: 0.4s ease;
+}
+.SectionExpand{
+    position: absolute;
+    width: 100%;
+    z-index: -10;
+    height: 100%;
+}
+.SideNavbar-small{
+    padding-top: 100px;
+    padding-left: 20px;
+    height: 100%;
+    display: grid;
+    grid-template-rows:repeat(5,50px) ;
+    flex-wrap: wrap;
+    width: 100%;
+    z-index: 99;
+    align-content: flex-start;
+    transition: 0.4s ease;
+    transform: translateY(-800px);
+    /* animation: slideDown 0.4s ease; */
+}
+@keyframes slideDown {
+    0%{
+        transform: translateY(-200px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.ThemeButtonContainer{
+    width: 100%;
+}
+.ThemeButton{
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    right: 40px;
+    bottom: 200px;
+    width: 100%;
+}
+.ThemeButton div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+ 
+}
 .sidenav-links{
+    text-align: left;
+    width: 140px;
+    padding: 10px;
+    color:rgb(129, 129, 129);
     text-decoration: none;
-    color:black;
+    font-size: 30px;
+    font-family: sanf-bold;
+    transition: 0.4s ease;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.sidenav-links div{
+    cursor: pointer;
+}
+.sidenav-links:hover{
+    color: black;
+}
+.sidenav-links.active{
+    color: black;
+}
+.dark-menu a{
+    color:#818181;
+}
+.dark-menu>.sidenav-links.active{
+    color: white;
+}
+.dark-menu a:hover{
+    color:white;
+}
+
+@media only screen and (min-width: 700px) {
+    .SideNavbar-small {
+        display: none;
+    }
 }

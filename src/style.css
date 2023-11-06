@@ -1,14 +1,13 @@
-*{
-    cursor: url('./assets/svg/default-cursor.svg'),auto;
-}
 
 body{
-    background-color: #eff1f4;
+    /* background-color: #eff1f4; */
+    transition: 0.4s ease;
+    background-color: white;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none
-  }
+  } */
   
   ::-webkit-scrollbar-track {
     /* background-color: #eff1f4; */
@@ -33,6 +32,9 @@ body{
 :root{
   --primary-color:#1040e2;
   --purple-color:#555a8f;
+  --black:black;
   --secondary-black:rgb(45, 45, 45);
   --light-black:rgb(76, 76, 76);
+  --white:white;
 }
+

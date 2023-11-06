@@ -1,0 +1,295 @@
+.SlidesContainer{
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    overflow-x: auto;
+    position: relative;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+		display: none;
+	}
+}
+.slides{
+    width: 100%;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+}
+.hint-text{
+    text-align: center;
+    font-family: r-medium;
+    font-size: 15px;
+    padding: 10px;
+    color: rgb(113, 113, 113);
+}
+.sanf-bold{
+    font-family: sanf-bold;
+}
+.ImageSliderContainer01{
+    background-color: #64C0ED;
+    width: 100%;
+    max-height: 600px;
+    min-height: 300px;
+    border-radius: 20px;
+    font-family: sanf-bold;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.ImageTextContainer01{
+    padding: 20px 20px 0px 20px;
+}
+.SliderHeading{
+    font-size: 55px;
+    color: black;
+    transition: 0.6s ease;
+}
+.SliderText{
+    color: rgb(27, 27, 27);
+    font-size: 25px;
+}
+.SliderImageContainer{
+   padding: 20px;
+}
+.SliderImage{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: -20px 20px 50px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: -20px 20px 50px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: -20px 20px 50px 0px rgba(0,0,0,0.5);
+}
+@media only screen and (max-width: 900px) {
+    .SliderHeading{
+        font-size: 40px;
+    }
+    .ImageSliderContainer01{
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 1fr;
+    }
+    .SliderText{
+        font-size: 20px;
+    }
+}
+
+/* Slider 2 */
+.ImageSliderContainer02{
+    background-color: #8E053D;
+    width: 100%;
+    max-height: 600px;
+    min-height: 300px;
+    border-radius: 20px;
+    font-family: sanf-bold;
+    justify-items: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+.ImageTextContainer02{
+    padding: 20px 20px 0px 20px;
+}
+.SliderHeading02{
+    font-size: 55px;
+    color: white;
+}
+.SliderText02{
+    color: rgb(213, 213, 213);
+    font-size: 25px;
+}
+.SliderImageContainer02{
+   padding: 20px;
+}
+.SliderImage02{
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: -20px 20px 50px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: -20px 20px 50px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: -20px 20px 50px 0px rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-width: 900px) {
+    .SliderHeading02{
+        font-size: 40px;
+    }
+    .ImageSliderContainer02{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .SliderText02{
+        font-size: 20px;
+    }
+}
+/* Slider 3 */
+.ImageSliderContainer03{
+    background-color: #2468EF;
+    width: 100%;
+    max-height: 600px;
+    min-height: 300px;
+    border-radius: 20px;
+    font-family: sanf-bold;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.ImageTextContainer03{
+    padding: 20px 20px 0px 20px;
+}
+.SliderHeading03{
+    font-size: 55px;
+    color: white;
+}
+.SliderText03{
+    color: rgb(213, 213, 213);
+    font-size: 25px;
+}
+.SliderImageContainer03{
+   padding: 20px;
+}
+.SliderImage03{
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: -20px 20px 50px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: -20px 20px 50px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: -20px 20px 50px 0px rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-width: 900px) {
+    .SliderHeading03{
+        font-size: 40px;
+    }
+    .ImageSliderContainer03{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .SliderText03{
+        font-size: 20px;
+    }
+}
+/* Slider 4 */
+.ImageSliderContainer04{
+    background-color: #ff6f6f;
+    width: 100%;
+    max-height: 600px;
+    min-height: 300px;
+    border-radius: 20px;
+    font-family: sanf-bold;
+    justify-items: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+.ImageTextContainer04{
+    padding: 0px 20px 20px 20px;
+}
+.SliderHeading04{
+    font-size: 55px;
+    color: white;
+}
+.SliderText04{
+    color: rgb(213, 213, 213);
+    font-size: 25px;
+}
+.SliderImageContainer04{
+   padding: 20px;
+}
+.SliderImage04{
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+@media only screen and (max-width: 900px) {
+    .SliderHeading04{
+        font-size: 40px;
+    }
+    .ImageSliderContainer04{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .SliderText04{
+        font-size: 20px;
+    }
+}
+/* Slider 5 */
+.ImageSliderContainer05{
+    background-color: #06035A;
+    width: 100%;
+    max-height: 600px;
+    min-height: 300px;
+    border-radius: 20px;
+    font-family: sanf-bold;
+    justify-items: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+.ImageTextContainer05{
+    padding: 0px 20px 20px 20px;
+}
+.SliderHeading05{
+    font-size: 55px;
+    color: white;
+}
+.SliderText05{
+    color: #C3C3C3;
+    font-size: 25px;
+}
+.SliderImageContainer05{
+   padding: 20px;
+}
+.SliderImage05{
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: -20px 20px 50px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: -20px 20px 50px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: -20px 20px 50px 0px rgba(0,0,0,0.5);
+}
+@media only screen and (max-width: 900px) {
+    .SliderHeading05{
+        font-size: 40px;
+    }
+    .ImageSliderContainer05{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .SliderText05{
+        font-size: 20px;
+    }
+}
+/* Slider 6 */
+.ImageSliderContainer06{
+    background-color: #F5F5F7;
+    width: 100%;
+    max-height: 600px;
+    min-height: 300px;
+    border-radius: 20px;
+    font-family: sanf-bold;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.ImageTextContainer06{
+    padding: 20px 20px 0px 20px;
+}
+.SliderImage06{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+@media only screen and (max-width: 900px) {
+    .ImageSliderContainer06{
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 1fr;
+    }
+}
