@@ -1,1 +1,1 @@
-Link : msingh17122000.github.io/manpreetsingh
+Link - msingh17122000.github.io/manpreetsingh
