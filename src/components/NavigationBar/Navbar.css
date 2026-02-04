@@ -6,6 +6,7 @@
     background-color: rgba(255, 255, 255, 0.7);
     height: 50px;
     width: 100%;
+    border-bottom: 1px solid #0000000f;
     display: grid;
     grid-template-columns: 40px 1fr 60px;
     align-items: center;
