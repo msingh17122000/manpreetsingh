@@ -7,5 +7,8 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  build: {
+    outDir: 'build',
+  },
   base: '/manpreetsingh/', // Matching the homepage field in package.json
 })
