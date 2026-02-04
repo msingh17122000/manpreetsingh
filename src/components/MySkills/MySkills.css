@@ -23,10 +23,9 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    &::-webkit-scrollbar {
-		display: none;
-	}
-    
+}
+.skills-container::-webkit-scrollbar {
+	display: none;
 }
 .skills-box{
     position: relative;

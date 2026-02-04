@@ -2,9 +2,6 @@
 import "../style.css";
 
 
-import AboutSection from '../components/AboutSection/AboutSection';
-import MySkills from '../components/MySkills/MySkills';
-import MyProjects from "../components/MyProjects/MyProjects";
 import IntroSection from "../components/IntroSection/IntroSection";
 import MyProjectCards from "../components/MyProjectCards/MyProjectCards";
 import WorkExperience from "../components/WorkExperience/WorkExperience";

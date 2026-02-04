@@ -1,21 +1,20 @@
-import { useEffect, useRef } from "react"
+import React, { useEffect } from "react"
 import { Route, Routes } from "react-router-dom";
 import "./style.css";
 
 import Home from "./pages/Home"
 import Contact from "./pages/Contact";
-import AboutMe from "./pages/AboutMe";
 import PageNotFound404 from "./pages/PageNotFound";
 import MyProjectsPage from "./pages/MyProjectsPage";
 import MacOSVenturaProject from "./pages/MacOSVenturaProject";
 import VintageComputerProject from "./pages/VintageComputerProject";
-import iOSLayoutProject from "./pages/iOSLayoutProject";
 import MinimalNavbar from "./components/MinimalNavbar/MinimalNavbar";
 import ImageCarouselComponent from "./pages/ImageCarouselComponent";
 import TailwindTest from "./components/TailwindTest";
+// eslint-disable-next-line no-unused-vars
+import iOSLayoutProject from "./pages/iOSLayoutProject";
 
 function App() {
-  const myElementRef = useRef();
 
   useEffect(() => {
     // Component initialization logic if needed

@@ -1,9 +1,5 @@
 import React from 'react'
 import "./ImageSliders.css"
-import screenShot01 from "../assets/images/my-projects/mc01.png"
-import screenShot02 from "../assets/images/my-projects/mc02.png"
-import screenShot03 from "../assets/images/my-projects/mc05.png"
-import screenShot05 from "../assets/images/my-projects/mc04.png"
 import ImageCarousel01 from "../assets/images/my-projects/image-carousel01.png"
 import ImageCarousel02 from "../assets/images/my-projects/image-carousel02.png"
 
@@ -19,8 +15,8 @@ function ImageCarouselComponent() {
             </div>
             <br />
             <div className='project-links'>
-                <a href='https://msingh17122000.github.io/Smooth-Image-Carousal/' target="_blank" className='read-more'>Live Project {'>'}</a>
-                <a href='https://github.com/msingh17122000/Smooth-Image-Carousal' target="_blank" className='read-more'>GitHub Repository {'>'}</a>
+                <a href='https://msingh17122000.github.io/Smooth-Image-Carousal/' target="_blank" rel="noreferrer" className='read-more'>Live Project {'>'}</a>
+                <a href='https://github.com/msingh17122000/Smooth-Image-Carousal' target="_blank" rel="noreferrer" className='read-more'>GitHub Repository {'>'}</a>
             </div>
             <br /><br />
             <div className='med-heading sanf-bold'>Highlights</div>

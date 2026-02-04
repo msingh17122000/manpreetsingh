@@ -1,9 +1,8 @@
 import React from 'react'
 import SocialLinks from '../components/SocialLinks/SocialLinks'
 import MyPic from '../assets/images/IMG_1306.jpg'
-import { useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 function AboutMe() {
-    const myElementRef = useRef();
     useEffect(() => {
         const blurDivs = document.querySelectorAll(".blur-load")
         blurDivs.forEach(div => {

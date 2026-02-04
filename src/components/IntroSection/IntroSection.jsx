@@ -1,12 +1,12 @@
 import React from 'react'
-import { motion, scale } from 'framer-motion'
+import { motion } from 'framer-motion'
 import portfolioLogo from '../../assets/images/portfolio_logo.png'
 import { useNavigate } from 'react-router-dom'
-import { IoIosArrowDropright, IoIosArrowRoundForward } from 'react-icons/io'
+import { IoIosArrowRoundForward } from 'react-icons/io'
 
 
 function IntroSection() {
-    const navigate=useNavigate()
+    const navigate = useNavigate()
     return (
         <section className=' max-w-[600px] mx-auto text-center min-h-[600px] flex items-center flex-col justify-center gap-8'>
             <motion.img
@@ -14,7 +14,7 @@ function IntroSection() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
                 src={portfolioLogo}
-                whileTap={{scale:0.9}}
+                whileTap={{ scale: 0.9 }}
                 title='Hi!'
                 className='w-40 cursor-pointer h-40 bg-[#F5DEB3] pl-2 object-contain  rounded-full shadow-lg'
                 alt="Portfolio Logo"
@@ -37,10 +37,10 @@ function IntroSection() {
                 </motion.button>
                 <motion.button initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    onClick={()=>{navigate('/contact')}}
+                    onClick={() => { navigate('/contact') }}
                     transition={{ duration: 0.2, delay: 0.6, ease: "easeOut" }} className='text-sm text-[#06c] flex gap-2 font-[400] items-center hover:bg-[#f5f5f7] px-4 py-3 rounded-full '>
                     Let's Connect
-                    <IoIosArrowRoundForward size={20}/>
+                    <IoIosArrowRoundForward size={20} />
                 </motion.button>
 
             </section>

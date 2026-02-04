@@ -19,19 +19,19 @@ function VintageComputerProject() {
       </div>
       <br />
       <div className='project-links'>
-        <a href='https://msingh17122000.github.io/Vintage-Computer/' target="_blank"className='read-more'>Live Project {'>'}</a>
-        <a href='https://github.com/msingh17122000/Vintage-Computer' target="_blank"className='read-more'>GitHub Repository {'>'}</a>
+        <a href='https://msingh17122000.github.io/Vintage-Computer/' target="_blank" rel="noreferrer" className='read-more'>Live Project {'>'}</a>
+        <a href='https://github.com/msingh17122000/Vintage-Computer' target="_blank" rel="noreferrer" className='read-more'>GitHub Repository {'>'}</a>
       </div>
       <br /><br />
       <div className='med-heading bold'>Project Screenshots</div><br />
       <div className='project-screenshots-gallery'>
-      <img src={Image01} alt="screenshot01"/>
-      <img src={Image02} alt="screenshot02"/>
-      <img src={Image04} alt="screenshot03"/>
-      <img src={Image05} alt="screenshot04"/>
-      <img src={Image06} alt="screenshot05"/>
+        <img src={Image01} alt="screenshot01" />
+        <img src={Image02} alt="screenshot02" />
+        <img src={Image04} alt="screenshot03" />
+        <img src={Image05} alt="screenshot04" />
+        <img src={Image06} alt="screenshot05" />
       </div>
-      <br/>
+      <br />
       <div className='med-heading bold'>Key Features</div><br />
       <div className='med-text'>
         <span className='bold sec-black'>Flickering Screen:</span> Implemented a realistic screen flicker effect to mimic the behavior of vintage CRT monitors, providing an authentic feel of the past.
@@ -45,18 +45,18 @@ function VintageComputerProject() {
       </div>
       <div className='med-heading bold'>Technologies Used</div><br />
       <div className='med-text'>
-      <span className='bold sec-black'>HTML:</span> Structured the project's layout and content.<br/><br/>
-      <span className='bold sec-black'>CSS:</span> Styled the simulator to replicate the appearance of a vintage computer.<br/><br/>
-      <span className='bold sec-black'>JavaScript:</span> Implemented interactivity, including screen flickering, mouse cursor, background color change, and terminal functionality.<br/><br/>
+        <span className='bold sec-black'>HTML:</span> Structured the project's layout and content.<br /><br />
+        <span className='bold sec-black'>CSS:</span> Styled the simulator to replicate the appearance of a vintage computer.<br /><br />
+        <span className='bold sec-black'>JavaScript:</span> Implemented interactivity, including screen flickering, mouse cursor, background color change, and terminal functionality.<br /><br />
       </div>
-      <br/>
+      <br />
       <div className='med-heading bold'>Outcome</div><br />
       <div className='med-text'>
-      This project demonstrates my proficiency in front-end web development, attention to detail, and creative problem-solving. It showcases my ability to combine modern web technologies with nostalgic design elements to create a memorable and engaging user experience.
+        This project demonstrates my proficiency in front-end web development, attention to detail, and creative problem-solving. It showcases my ability to combine modern web technologies with nostalgic design elements to create a memorable and engaging user experience.
 
-By developing this Vintage Computer Simulator, I honed my skills in UI/UX design, animation, and JavaScript programming, while also paying homage to the history of computing.
+        By developing this Vintage Computer Simulator, I honed my skills in UI/UX design, animation, and JavaScript programming, while also paying homage to the history of computing.
 
-Feel free to adapt and expand upon this description to best fit your specific achievements and experiences related to this project on your resume.
+        Feel free to adapt and expand upon this description to best fit your specific achievements and experiences related to this project on your resume.
 
       </div>
       <br /><br /><br /><br />

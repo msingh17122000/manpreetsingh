@@ -8,9 +8,9 @@
     position: relative;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    &::-webkit-scrollbar {
-		display: none;
-	}
+}
+.SlidesContainer::-webkit-scrollbar {
+	display: none;
 }
 .slides{
     width: 100%;

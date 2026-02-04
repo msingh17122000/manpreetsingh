@@ -1,22 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import NavbarLogo from '../../assets/images/portfolio_logo.png';
-import LightDarkButton from '../LightDarkButton/LightDarkButton';
-import { HiOutlineArrowUpRight } from "react-icons/hi2";
 import { MdArrowOutward } from 'react-icons/md';
 
 
 const MinimalNavbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
+    // const [scrolled, setScrolled] = useState(false);
 
     const [activeSection, setActiveSection] = useState('home');
     const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 20);
+            // setScrolled(window.scrollY > 20);
 
             // Active section tracking for Home page
             if (location.pathname === '/' || location.pathname === '/manpreetsingh/') {
@@ -45,7 +42,7 @@ const MinimalNavbar = () => {
     const navLinks = [
         { name: 'Home', path: '/' },
         { name: 'Projects', path: '/my-projects' },
-        { name: 'Resume', icon:<MdArrowOutward size={16} /> , path: 'https://drive.google.com/file/d/1wQMHOxo5UHAYS22ZsB1v7Js2-913VSD3/view?usp=drive_link', external: true },
+        { name: 'Resume', icon: <MdArrowOutward size={16} />, path: 'https://drive.google.com/file/d/1wQMHOxo5UHAYS22ZsB1v7Js2-913VSD3/view?usp=drive_link', external: true },
         { name: 'Contact', path: '/contact' },
     ];
 
@@ -124,8 +121,8 @@ const MinimalNavbar = () => {
                                 key={link.name}
                                 onClick={() => scrollToSection(link.path)}
                                 className={`text-sm font-[400] transition-colors pb-1 border-b-2 ${activeSection === 'home' && link.name === 'Home'
-                                        ? 'text-black dark:text-white border-black dark:border-white'
-                                        : 'text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white border-transparent'
+                                    ? 'text-black dark:text-white border-black dark:border-white'
+                                    : 'text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white border-transparent'
                                     }`}
                             >
                                 {link.name}
@@ -206,8 +203,8 @@ const MinimalNavbar = () => {
                                         <button
                                             onClick={() => scrollToSection(link.path)}
                                             className={`text-4xl font-semibold tracking-tight text-left w-full ${activeSection === 'home' && link.name === 'Home'
-                                                    ? 'text-blue-600 dark:text-blue-400'
-                                                    : 'text-gray-900 dark:text-white'
+                                                ? 'text-blue-600 dark:text-blue-400'
+                                                : 'text-gray-900 dark:text-white'
                                                 }`}
                                         >
                                             {link.name}
