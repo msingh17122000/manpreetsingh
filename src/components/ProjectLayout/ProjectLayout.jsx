@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import './ProjectDesign.css';
 import { MdArrowOutward } from 'react-icons/md';
+import { IoIosLock } from 'react-icons/io';
 
 const ProjectLayout = ({
     title,
@@ -10,6 +11,8 @@ const ProjectLayout = ({
     description,
     liveLink,
     githubLink,
+    privateRepo,
+    contribution,
     media = [], // Array of { type: 'image'|'video', src: string, caption?: string }
     children // Support for Bento Grid fallback or additional content
 }) => {
@@ -23,11 +26,11 @@ const ProjectLayout = ({
         setActiveIndex((prev) => (prev === 0 ? media.length - 1 : prev - 1));
     };
 
-    useEffect(() => {
-        if (media.length <= 1) return;
-        const interval = setInterval(nextSlide, 5000);
-        return () => clearInterval(interval);
-    }, [media.length, activeIndex]);
+    // useEffect(() => {
+    //     if (media.length <= 1) return;
+    //     const interval = setInterval(nextSlide, 5000);
+    //     return () => clearInterval(interval);
+    // }, [media.length, activeIndex]);
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -65,6 +68,10 @@ const ProjectLayout = ({
                     {description}
                 </motion.p>
 
+                <motion.p className="text-sm text-[#686868] font-[500] mt-4" variants={itemVariants}>
+                    {contribution}
+                </motion.p>
+
                 <motion.div className="apple-hero-links flex gap-4" style={{ marginTop: '32px' }} variants={itemVariants}>
                     {liveLink && (
                         <a href={liveLink} target="_blank" rel="noreferrer" className="gap-2 bg-[#f5f5f7] w-fit  hover:bg-[#efefef] text-[#0071e3] hover:text-[#06c] px-4 py-2 rounded-full text-sm flex items-center">
@@ -76,6 +83,12 @@ const ProjectLayout = ({
                             GitHub <MdArrowOutward />
                         </a>
                     )}
+                    {
+                        privateRepo &&
+                        <button disabled title='Private Repository' href={privateRepo} target="_blank" rel="noreferrer" className="gap-2 bg-[#f5f5f7] w-fit text-[#0071e3] disabled:opacity-60 disabled:select-none disabled:cursor-not-allowed hover:text-[#06c] px-4 py-2 rounded-full text-sm flex items-center">
+                            <IoIosLock /> Github
+                        </button>
+                    }
                 </motion.div>
             </motion.header>
 
@@ -133,6 +146,25 @@ const ProjectLayout = ({
                             </div>
                         </>
                     )}
+                </div>
+            )}
+
+            {/* Thumbnails Navigation */}
+            {media.length > 1 && (
+                <div className="thumbnail-list">
+                    {media.map((item, index) => (
+                        <div
+                            key={index}
+                            className={`thumbnail-item ${index === activeIndex ? 'active' : ''}`}
+                            onClick={() => setActiveIndex(index)}
+                        >
+                            {item.type === 'video' ? (
+                                <video src={item.src} className="thumbnail-video-preview" muted />
+                            ) : (
+                                <img src={item.src} alt={`Thumbnail ${index + 1}`} className="thumbnail-image" />
+                            )}
+                        </div>
+                    ))}
                 </div>
             )}
 
