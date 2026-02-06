@@ -68,8 +68,8 @@ const ProjectLayout = ({
                     {description}
                 </motion.p>
 
-                <motion.p className="text-sm text-[#686868] font-[500] mt-4" variants={itemVariants}>
-                    {contribution}
+                <motion.p className="text-sm text-[#686868] font-[500] mt-4 flex gap-4 flex-wrap" variants={itemVariants}>
+                    <span>Contributions </span> <span>{contribution}</span>
                 </motion.p>
 
                 <motion.div className="apple-hero-links flex gap-4" style={{ marginTop: '32px' }} variants={itemVariants}>

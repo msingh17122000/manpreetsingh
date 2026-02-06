@@ -14,6 +14,7 @@ import TailwindTest from "./components/TailwindTest";
 // eslint-disable-next-line no-unused-vars
 import iOSLayoutProject from "./pages/iOSLayoutProject";
 import EliteTailorsProject from "./pages/EliteTailorsProject";
+import PawsUpProject from "./pages/PawsUpProject";
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
         <Route path='/my-projects' exact element={<MyProjectsPage />} />
         <Route path='/my-projects/macOS-ventura-simulator' exact element={<MacOSVenturaProject />} />
         <Route path='/my-projects/elite-tailors' exact element={<EliteTailorsProject />} />
+        <Route path='/my-projects/pawsup' exact element={<PawsUpProject />} />
         <Route path='/my-projects/iOS-16.2-Replica' exact element={<iOSLayoutProject />} />
         <Route path='/my-projects/Vintage-Computer-Simulator' exact element={<VintageComputerProject />} />
         <Route path='/my-projects/Image-Carousel' exact element={<ImageCarouselComponent />} />

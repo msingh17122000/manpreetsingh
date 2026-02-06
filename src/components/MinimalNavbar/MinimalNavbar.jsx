@@ -42,7 +42,7 @@ const MinimalNavbar = () => {
     const navLinks = [
         { name: 'Home', path: '/' },
         { name: 'Projects', path: '/my-projects' },
-        { name: 'Resume', icon: <MdArrowOutward size={16} />, path: 'https://drive.google.com/file/d/1wQMHOxo5UHAYS22ZsB1v7Js2-913VSD3/view?usp=drive_link', external: true },
+        { name: 'Resume', icon: <MdArrowOutward size={16} />, path: 'https://drive.google.com/file/d/1i1UJqFGwhKaq5K40MAn02vMYBSCBFJjT/view?usp=drive_link', external: true },
         { name: 'Contact', path: '/contact' },
     ];
 
@@ -153,20 +153,16 @@ const MinimalNavbar = () => {
                     {/* <LightDarkButton /> */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none"
+                        className="flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none"
                         aria-label="Toggle menu"
                     >
                         <motion.span
-                            animate={isOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
-                            className="w-6 h-0.5 bg-black dark:bg-white rounded-full block"
+                            animate={isOpen ? { rotate: 45, y: 4 } : { rotate: 0, y: 0 }}
+                            className="w-6 h-0.5 bg-black dark:bg-white rounded-full block origin-center"
                         />
                         <motion.span
-                            animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
-                            className="w-6 h-0.5 bg-black dark:bg-white rounded-full block"
-                        />
-                        <motion.span
-                            animate={isOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
-                            className="w-6 h-0.5 bg-black dark:bg-white rounded-full block"
+                            animate={isOpen ? { rotate: -45, y: -4 } : { rotate: 0, y: 0 }}
+                            className="w-6 h-0.5 bg-black dark:bg-white rounded-full block origin-center"
                         />
                     </button>
                 </div>
@@ -187,22 +183,22 @@ const MinimalNavbar = () => {
                                 <motion.div
                                     key={link.name}
                                     variants={linkVariants}
-                                    className="border-b border-zinc-100 dark:border-zinc-800 pb-4"
+                                    className="dark:border-zinc-800 "
                                 >
                                     {link.external ? (
                                         <a
                                             href={link.path}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="text-4xl font-semibold text-gray-900 dark:text-white tracking-tight"
+                                            className="text-2xl flex items-center gap-1 font-semibold text-gray-900 dark:text-white tracking-tight"
                                             onClick={() => setIsOpen(false)}
                                         >
-                                            {link.name}
+                                            {link.name} <MdArrowOutward/>
                                         </a>
                                     ) : link.scroll ? (
                                         <button
                                             onClick={() => scrollToSection(link.path)}
-                                            className={`text-4xl font-semibold tracking-tight text-left w-full ${activeSection === 'home' && link.name === 'Home'
+                                            className={`text-2xl font-semibold tracking-tight text-left w-full ${activeSection === 'home' && link.name === 'Home'
                                                 ? 'text-blue-600 dark:text-blue-400'
                                                 : 'text-gray-900 dark:text-white'
                                                 }`}
@@ -213,7 +209,7 @@ const MinimalNavbar = () => {
                                         <NavLink
                                             to={link.path}
                                             className={({ isActive }) =>
-                                                `text-4xl font-semibold tracking-tight ${isActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-900 dark:text-white'
+                                                `text-2xl font-semibold tracking-tight ${isActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-900 dark:text-white'
                                                 }`
                                             }
                                             onClick={() => setIsOpen(false)}
@@ -226,9 +222,9 @@ const MinimalNavbar = () => {
                             ))}
                         </div>
 
-                        <div className="mt-auto mb-10">
+                        {/* <div className="mt-auto mb-10">
                             <p className="text-zinc-500 text-sm">© 2026 Manpreet Singh. All rights reserved.</p>
-                        </div>
+                        </div> */}
                     </motion.div>
                 )}
             </AnimatePresence>

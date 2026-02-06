@@ -162,7 +162,7 @@ body {
   position: relative;
   max-width: 1200px;
   margin: 40px auto;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   overflow: hidden;
   height: clamp(400px, 60vh, 700px);
   border-radius: var(--apple-card-radius);
