@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import portfolioLogo from '../../assets/images/portfolio_logo.png'
 import { useNavigate } from 'react-router-dom'
 import { IoIosArrowRoundForward } from 'react-icons/io'
+import { MdArrowOutward } from 'react-icons/md'
 
 
 function IntroSection() {
@@ -32,8 +33,15 @@ function IntroSection() {
             <section className='mt-4 flex gap-4'>
                 <motion.button initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.2, delay: 0.6, ease: "easeOut" }} className='text-sm hover:bg-[#f5f5f7] font-[400] px-4 py-3 rounded-full text-[#06c]  '>
-                    View Work
+                    onClick={() => {
+                        window.open(
+                            'https://drive.google.com/file/d/1i1UJqFGwhKaq5K40MAn02vMYBSCBFJjT/view?usp=drive_link',
+                            '_blank'
+                        );
+                    }}
+                    transition={{ duration: 0.2, delay: 0.6, ease: "easeOut" }} className='text-sm text-[#06c] flex gap-2 font-[400] items-center hover:bg-[#f5f5f7] px-4 py-3 rounded-full '>
+                    View Resume
+                    <MdArrowOutward />
                 </motion.button>
                 <motion.button initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
