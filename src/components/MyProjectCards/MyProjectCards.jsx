@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import macosThumb from '../../assets/images/my-projects/mc01.png';
 import iosThumb from '../../assets/images/my-projects/myproject03.png';
-import eliteTailorsThumb from '../../assets/images/projectImages/elitetailors_thubmnail.png';
+import eliteTailorsThumb from '../../assets/images/projectImages/elite-tailors/elitetailors_thubmnail.png';
 import pawsupThumb from '../../assets/images/projectImages/pawsUp_thumbnail.png';
 import computerGarageThumb from '../../assets/images/projectImages/Image Not Available.jpg';
 import vintageThumb from '../../assets/images/my-projects/myproject02.png';
@@ -25,7 +25,7 @@ const projects = [
         id: 'pawsup',
         category: 'Web Application',
         title: 'PawsUp – Pet Adoption Platform',
-        date: 'Oct 2024 - Dec 2024',
+        date: 'Nov 2024 - Mar 2025',
         description: 'A full-stack pet adoption platform enabling users to browse pets, submit adoption requests, and manage listings through an admin dashboard.',
         image: pawsupThumb,
         link: '/my-projects/pawsup',

@@ -10,5 +10,5 @@ export default defineConfig({
   build: {
     outDir: 'build',
   },
-  base: '/manpreetsingh/', // Matching the homepage field in package.json
+  base: '/', // Updated to root as requested
 })
