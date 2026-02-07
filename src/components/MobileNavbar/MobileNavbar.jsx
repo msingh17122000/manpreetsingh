@@ -4,7 +4,6 @@ import "./MobileNavbar.css"
 import upArrow from "../../assets/svg/up-arrow.svg"
 import NavbarLogo from '../../assets/svg/ms-logo.svg'
 import { Link, NavLink } from 'react-router-dom'
-import LightDarkButton from '../LightDarkButton/LightDarkButton'
 function MobileNavbar() {
   const [isVisible, setIsVisible] = useState(false); // Initial visibility state
   const showMenu = () => {
@@ -18,7 +17,7 @@ function MobileNavbar() {
     }
   };
 
-  function closeMenu(){
+  function closeMenu() {
     document.getElementById("LineOne").style.transform = "rotate(0deg)";
     document.getElementById("LineTwo").style.transform = "rotate(0deg)";
     setTimeout(() => {
@@ -28,17 +27,17 @@ function MobileNavbar() {
     }, 200);
     document.getElementById('MobileNavbarContainer').style.height = '45px';
     document.getElementById('SideNavbar-mobile').style.transform = 'translateY(-800px)';
-    document.body.style.overflow='auto';
+    document.body.style.overflow = 'auto';
   }
- function openMenu(){
-  document.getElementById("LineOne").style.transform = "rotate(45deg)";
-  document.getElementById("LineTwo").style.transform = "rotate(-45deg)";
-  document.getElementById("LineOne").style.position = "absolute";
-  document.getElementById("LineTwo").style.position = "absolute";
-  document.getElementById('MobileNavbarContainer').style.height = '100vh';
-  document.getElementById('SideNavbar-mobile').style.transform = 'translateY(0px)';
-  document.body.style.overflow='hidden';
- }
+  function openMenu() {
+    document.getElementById("LineOne").style.transform = "rotate(45deg)";
+    document.getElementById("LineTwo").style.transform = "rotate(-45deg)";
+    document.getElementById("LineOne").style.position = "absolute";
+    document.getElementById("LineTwo").style.position = "absolute";
+    document.getElementById('MobileNavbarContainer').style.height = '100vh';
+    document.getElementById('SideNavbar-mobile').style.transform = 'translateY(0px)';
+    document.body.style.overflow = 'hidden';
+  }
 
 
   return (
@@ -53,19 +52,14 @@ function MobileNavbar() {
             </div>
           </div>
         </div>
-        <div className='SectionExpand'id='SectionExpand'>
+        <div className='SectionExpand' id='SectionExpand'>
           <div className='SideNavbar-small' id='SideNavbar-mobile'>
-            <NavLink to="/" className='sidenav-links'onClick={closeMenu}><div className='SideNavbar-buttons'><div className='Sidebar-buttons-label show'>Home</div></div></NavLink>
-            <NavLink to="/about-me" className='sidenav-links'onClick={closeMenu}><div className='SideNavbar-buttons pink'><div className='Sidebar-buttons-label show'>About me</div></div></NavLink>
-            <NavLink to="/my-projects" id='projects-btn' className='sidenav-links'onClick={closeMenu}><div className='SideNavbar-buttons pink'><div className='Sidebar-buttons-label show'>Projects</div></div></NavLink>
-            <a href='https://drive.google.com/file/d/1wQMHOxo5UHAYS22ZsB1v7Js2-913VSD3/view?usp=drive_link' target="_blank" className='sidenav-links'onClick={closeMenu}><div className='SideNavbar-buttons'><div className='Sidebar-buttons-label show'>Resume</div></div></a>
-            <NavLink to="/contact" className='sidenav-links'><div className='SideNavbar-buttons'><div className='Sidebar-buttons-label show'onClick={closeMenu}>Contact</div></div></NavLink>
-            <div className='ThemeButtonContainer'>
-              <div className='ThemeButton'>
-                <LightDarkButton />
-              </div>
-            </div>
-            </div>
+            <NavLink to="/" className='sidenav-links' onClick={closeMenu}><div className='SideNavbar-buttons'><div className='Sidebar-buttons-label show'>Home</div></div></NavLink>
+            <NavLink to="/about-me" className='sidenav-links' onClick={closeMenu}><div className='SideNavbar-buttons pink'><div className='Sidebar-buttons-label show'>About me</div></div></NavLink>
+            <NavLink to="/my-projects" id='projects-btn' className='sidenav-links' onClick={closeMenu}><div className='SideNavbar-buttons pink'><div className='Sidebar-buttons-label show'>Projects</div></div></NavLink>
+            <a href='https://drive.google.com/file/d/1wQMHOxo5UHAYS22ZsB1v7Js2-913VSD3/view?usp=drive_link' target="_blank" className='sidenav-links' onClick={closeMenu}><div className='SideNavbar-buttons'><div className='Sidebar-buttons-label show'>Resume</div></div></a>
+            <NavLink to="/contact" className='sidenav-links'><div className='SideNavbar-buttons'><div className='Sidebar-buttons-label show' onClick={closeMenu}>Contact</div></div></NavLink>
+          </div>
         </div>
       </div>
     </div>

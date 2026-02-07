@@ -18,7 +18,7 @@ function WorkExperience() {
         viewport={{ once: true }}
         transition={{ duration: 0.4, delay: 0.2 }}
       >
-        <Link className='border-b border-t max-sm:flex-wrap py-6 px-4 flex gap-2 hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors'>
+        <Link to={"/my-projects/elite-tailors"} className='border-b border-t max-sm:flex-wrap py-6 px-4 flex gap-2 hover:bg-zinc-50 transition-colors'>
           <div className='max-w-[100px] w-full font-[500] text-[#686868] mt-1 text-sm'>
             2023 - 2025
           </div>

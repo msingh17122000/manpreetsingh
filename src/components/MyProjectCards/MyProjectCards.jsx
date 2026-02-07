@@ -24,7 +24,7 @@ const projects = [
     {
         id: 'pawsup',
         category: 'Web Application',
-        title: 'PawsUp – Pet Adoption Platform',
+        title: 'PawsUp ',
         date: 'Nov 2024 - Mar 2025',
         description: 'A full-stack pet adoption platform enabling users to browse pets, submit adoption requests, and manage listings through an admin dashboard.',
         image: pawsupThumb,
@@ -40,7 +40,7 @@ const projects = [
         date: 'June 2023 - Aug 2023',
         description: "A comprehensive e-commerce platform that offers a wide range of computer-related products and accessories. This project allowed me to demonstrate my expertise in web development and database management, incorporating HTML, CSS, JavaScript, PHP, and MySQL to create a fully functional and user-friendly website for online shopping.",
         image: computerGarageThumb,
-        link: '/my-projects/elite-tailors',
+        // link: '/my-projects/elite-tailors',
         tags: ['php', 'mysql', 'html', 'css', 'js'],
         bg: 'bg-white'
     },
@@ -62,7 +62,7 @@ const projects = [
         date: 'Dec 2022',
         description: 'A pixel-perfect replica of the iOS home screen layout and animations.',
         image: iosThumb,
-        link: '/my-projects/iOS-16.2-Replica',
+        // link: '/my-projects/iOS-16.2-Replica',
         tags: ['CSS', 'HTML', 'UI Design'],
         bg: 'bg-white'
     },
@@ -99,10 +99,10 @@ const MyProjectCards = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
-                        className="rounded-[2rem] overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 transition-all duration-300 hover:shadow-lg hover:border-zinc-300 dark:hover:border-zinc-700 group cursor-pointer"
+                        className="rounded-[1rem] bg-[#f5f5f7] overflow-hidden  transition-all duration-300 group cursor-pointer"
                     >
                         <Link to={project.link}>
-                            <div className="h-[220px] overflow-hidden bg-zinc-100 dark:bg-zinc-800 relative">
+                            <div className="h-[240px] overflow-hidden bg-zinc-100 relative">
                                 <img
                                     src={project.image}
                                     alt={project.title}
@@ -115,21 +115,21 @@ const MyProjectCards = () => {
 
                             <div className="p-6 flex flex-col h-[280px]">
                                 <div className="flex justify-between items-start mb-2">
-                                    <h3 className="text-xl font-semibold leading-tight dark:text-white">
+                                    <h3 className="text-xl font-semibold leading-tight">
                                         {project.title}
                                     </h3>
-                                    <IoIosArrowForward className="text-zinc-400 dark:text-zinc-600 group-hover:text-blue-500 transition-colors" size={20} />
+                                    <IoIosArrowForward className="text-zinc-400 group-hover:text-blue-500 transition-colors" size={20} />
                                 </div>
-                                <span className="text-xs text-zinc-500 dark:text-zinc-400 mb-4">
+                                <span className="text-xs text-zinc-500 mb-4">
                                     {project.date}
                                 </span>
-                                <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-6 line-clamp-3 leading-relaxed font-light">
+                                <p className="text-sm text-zinc-600 mb-6 line-clamp-3 leading-relaxed font-light">
                                     {project.description}
                                 </p>
 
                                 <div className="mt-auto flex flex-wrap gap-2">
                                     {project.tags.map(tag => (
-                                        <span key={tag} className="text-[10px] bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2 py-1 rounded-md font-medium">
+                                        <span key={tag} className="text-[10px] bg-white text-zinc-600 px-2 py-1 rounded-md font-medium">
                                             {tag}
                                         </span>
                                     ))}

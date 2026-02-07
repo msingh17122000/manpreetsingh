@@ -152,15 +152,6 @@
 .sidenav-links.active{
     color: black;
 }
-.dark-menu a{
-    color:#818181;
-}
-.dark-menu>.sidenav-links.active{
-    color: white;
-}
-.dark-menu a:hover{
-    color:white;
-}
 
 @media only screen and (min-width: 700px) {
     .SideNavbar-small {

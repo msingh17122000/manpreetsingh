@@ -92,13 +92,13 @@ const MinimalNavbar = () => {
 
     return (
         <nav
-            className="fixed top-0 w-full z-[1000] bg-white/80 dark:bg-black/80 backdrop-blur-lg border-b border-black/5 dark:border-white/10"
+            className="fixed top-0 w-full z-[1000] bg-white/80 backdrop-blur-lg border-b border-black/5"
         >
             <div className="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between">
                 {/* Logo */}
                 <Link to="/" className="flex items-center space-x-2 z-[1001]" onClick={() => setIsOpen(false)}>
                     {/* <img src={NavbarLogo} alt="Logo" className="w-8 h-8" /> */}
-                    <span className="font-semibold text-lg tracking-tight dark:text-white">dev.manpreet</span>
+                    <span className="font-semibold text-lg tracking-tight">dev.manpreet</span>
                 </Link>
 
                 {/* Desktop Links */}
@@ -110,7 +110,7 @@ const MinimalNavbar = () => {
                                 href={link.path}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="text-sm flex items-center gap-1 font-[400] text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white transition-colors"
+                                className="text-sm flex items-center gap-1 font-[400] text-gray-600 hover:text-black transition-colors"
                             >
                                 {link.name}
                                 {link.icon && <span >{link.icon}</span>}
@@ -121,8 +121,8 @@ const MinimalNavbar = () => {
                                 key={link.name}
                                 onClick={() => scrollToSection(link.path)}
                                 className={`text-sm font-[400] transition-colors pb-1 border-b-2 ${activeSection === 'home' && link.name === 'Home'
-                                    ? 'text-black dark:text-white border-black dark:border-white'
-                                    : 'text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white border-transparent'
+                                    ? 'text-black border-black'
+                                    : 'text-gray-600 hover:text-black border-transparent'
                                     }`}
                             >
                                 {link.name}
@@ -134,8 +134,8 @@ const MinimalNavbar = () => {
                                 to={link.path}
                                 className={({ isActive }) =>
                                     `text-sm font-[400] transition-colors ${isActive
-                                        ? ' dark:text-white border-black dark:border-white underline  underline-offset-[6px] text-[#06c]'
-                                        : 'text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white border-transparent'
+                                        ? ' border-black underline  underline-offset-[6px] text-[#06c]'
+                                        : 'text-gray-600 hover:text-black border-transparent'
                                     }`
                                 }
                             >
@@ -143,14 +143,10 @@ const MinimalNavbar = () => {
                             </NavLink>
                         )
                     ))}
-                    {/* <div className="pl-4 border-l border-gray-200 dark:border-gray-800">
-                        <LightDarkButton />
-                    </div> */}
                 </div>
 
                 {/* Mobile Toggle */}
                 <div className="md:hidden flex items-center space-x-4 z-[1001]">
-                    {/* <LightDarkButton /> */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className="flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none"
@@ -158,11 +154,11 @@ const MinimalNavbar = () => {
                     >
                         <motion.span
                             animate={isOpen ? { rotate: 45, y: 4 } : { rotate: 0, y: 0 }}
-                            className="w-6 h-0.5 bg-black dark:bg-white rounded-full block origin-center"
+                            className="w-6 h-0.5 bg-black rounded-full block origin-center"
                         />
                         <motion.span
                             animate={isOpen ? { rotate: -45, y: -4 } : { rotate: 0, y: 0 }}
-                            className="w-6 h-0.5 bg-black dark:bg-white rounded-full block origin-center"
+                            className="w-6 h-0.5 bg-black rounded-full block origin-center"
                         />
                     </button>
                 </div>
@@ -176,31 +172,31 @@ const MinimalNavbar = () => {
                         initial="closed"
                         animate="open"
                         exit="closed"
-                        className="md:hidden fixed inset-0 w-full bg-white dark:bg-black z-[1000] flex flex-col pt-24 px-10"
+                        className="md:hidden fixed inset-0 w-full bg-white z-[1000] flex flex-col pt-24 px-10"
                     >
                         <div className="flex flex-col space-y-6">
                             {navLinks.map((link, idx) => (
                                 <motion.div
                                     key={link.name}
                                     variants={linkVariants}
-                                    className="dark:border-zinc-800 "
+                                    className=""
                                 >
                                     {link.external ? (
                                         <a
                                             href={link.path}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="text-2xl flex items-center gap-1 font-semibold text-gray-900 dark:text-white tracking-tight"
+                                            className="text-2xl flex items-center gap-1 font-semibold text-gray-900 tracking-tight"
                                             onClick={() => setIsOpen(false)}
                                         >
-                                            {link.name} <MdArrowOutward/>
+                                            {link.name} <MdArrowOutward />
                                         </a>
                                     ) : link.scroll ? (
                                         <button
                                             onClick={() => scrollToSection(link.path)}
                                             className={`text-2xl font-semibold tracking-tight text-left w-full ${activeSection === 'home' && link.name === 'Home'
-                                                ? 'text-blue-600 dark:text-blue-400'
-                                                : 'text-gray-900 dark:text-white'
+                                                ? 'text-blue-600'
+                                                : 'text-gray-900'
                                                 }`}
                                         >
                                             {link.name}
@@ -209,7 +205,7 @@ const MinimalNavbar = () => {
                                         <NavLink
                                             to={link.path}
                                             className={({ isActive }) =>
-                                                `text-2xl font-semibold tracking-tight ${isActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-900 dark:text-white'
+                                                `text-2xl font-semibold tracking-tight ${isActive ? 'text-blue-600' : 'text-gray-900'
                                                 }`
                                             }
                                             onClick={() => setIsOpen(false)}
