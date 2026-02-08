@@ -13,6 +13,7 @@ const ProjectLayout = ({
     githubLink,
     privateRepo,
     contribution,
+    containerClass,
     media = [], // Array of { type: 'image'|'video', src: string, caption?: string }
     children // Support for Bento Grid fallback or additional content
 }) => {
@@ -50,7 +51,7 @@ const ProjectLayout = ({
     };
 
     return (
-        <div className="apple-project-container">
+        <div className={`apple-project-container ${containerClass}`}>
             <motion.header
                 className="apple-hero"
                 initial="hidden"
@@ -67,10 +68,13 @@ const ProjectLayout = ({
                 <motion.p className="apple-body-text" variants={itemVariants}>
                     {description}
                 </motion.p>
+                {
+                    contribution &&
+                    <motion.p className="text-sm text-[#686868] font-[500] mt-4 flex gap-4 flex-wrap" variants={itemVariants}>
+                        <span>Contributions </span> <span>{contribution}</span>
+                    </motion.p>
+                }
 
-                <motion.p className="text-sm text-[#686868] font-[500] mt-4 flex gap-4 flex-wrap" variants={itemVariants}>
-                    <span>Contributions </span> <span>{contribution}</span>
-                </motion.p>
 
                 <motion.div className="apple-hero-links flex gap-4" style={{ marginTop: '32px' }} variants={itemVariants}>
                     {liveLink && (

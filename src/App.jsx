@@ -15,6 +15,8 @@ import TailwindTest from "./components/TailwindTest";
 import iOSLayoutProject from "./pages/iOSLayoutProject";
 import EliteTailorsProject from "./pages/EliteTailorsProject";
 import PawsUpProject from "./pages/PawsUpProject";
+import AppleLiquidGlassCodepen from "./pages/AppleLiquidGlassCodepen";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -35,10 +37,12 @@ function App() {
         <Route path='/my-projects/iOS-16.2-Replica' exact element={<iOSLayoutProject />} />
         <Route path='/my-projects/Vintage-Computer-Simulator' exact element={<VintageComputerProject />} />
         <Route path='/my-projects/Image-Carousel' exact element={<ImageCarouselComponent />} />
+        <Route path='/codepen/apple-liquid-glass' exact element={<AppleLiquidGlassCodepen />} />
         <Route path='/contact' exact element={<Contact />} />
         <Route path='/tailwind-test' exact element={<TailwindTest />} />
         <Route path="*" element={<PageNotFound404 />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }

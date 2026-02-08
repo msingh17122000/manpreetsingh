@@ -11,6 +11,7 @@ import WorkExperience from "../components/WorkExperience/WorkExperience";
 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import CodepenSection from "../components/CodepenSection/CodepenSection";
 
 function Home() {
     const { hash } = useLocation();
@@ -31,6 +32,7 @@ function Home() {
       <IntroSection/>
       <WorkExperience/>
       <MyProjectCards/>
+      <CodepenSection/>
 
    
 
